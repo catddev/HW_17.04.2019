@@ -9,18 +9,22 @@ istream & operator>>(istream & is, Auto & obj)
 
 ostream & operator<<(ostream & os, Auto obj)
 {
-	os << obj.company << endl << obj.salon << obj.station << endl;
+	os << "Company: " << obj.company << " Salon: " << obj.salon << " Station: " << obj.station << endl;
 	return os;
 }
 
 istream & operator>>(istream & is, Picture & obj)
 {
-	// TODO: вставьте здесь оператор return
+	getline(is, obj.collector, '\n');// считывание string с пробелами
+	getline(is, obj.exhibition, '\n');
+	
+	return is;
 }
 
 ostream & operator<<(ostream & os, Picture obj)
 {
-	// TODO: вставьте здесь оператор return
+	os << "Collector: "<<obj.collector <<" Exhibiton: "<< obj.exhibition << endl;
+	return os;
 }
 
 
