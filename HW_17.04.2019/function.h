@@ -22,6 +22,16 @@ private:
 	string salon;
 	string station;
 public:
+	Auto();
+	Auto(string co, string s, string st);
+	void setCompany(string company);
+	void setSalon(string salon);
+	void setStation(string station);
+
+	string getCompany();
+	string getSalon();
+	string getStation();
+
 	friend istream& operator>>(istream& is, Auto & obj);
 	friend ostream& operator<<(ostream& os, Auto obj);
 };
@@ -33,6 +43,7 @@ private:
 	string collector;
 	string exhibition;
 public:
+	Picture();
 	friend istream& operator>>(istream& is, Picture & obj);
 	friend ostream& operator<<(ostream& os, Picture obj);
 };
